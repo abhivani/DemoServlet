@@ -7,6 +7,8 @@ public class UserDTO {
 	private String lastName;
 	private String email;
 	private String password;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -37,6 +39,9 @@ public class UserDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+	
 	
 	
 

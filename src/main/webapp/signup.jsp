@@ -11,11 +11,11 @@
 <input name="task" value ="signup" type="hidden">
 
 <p>
-FirstName: <input name="firstname" type="text">
+FirstName: <input name="firstName" type="text">
 </p>
 
 <p>
-LastName: <input name="lastname" type="text">
+LastName: <input name="lastName" type="text">
 </p>
 
 <p>

@@ -16,9 +16,10 @@ import com.amstech.inc.demo.DTO.UserDTO;
 
 /**
  * Servlet implementation class detailsServlet
+ * @param <Int>
  */
 @WebServlet("/detailsServlet")
-public class detailsServlet extends HttpServlet {
+public class detailsServlet<Int> extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -92,19 +93,24 @@ public class detailsServlet extends HttpServlet {
 		try {
 
 			System.out.println("POST");
-
+			
 			String firstname = request.getParameter("firstName");
 			String lastname = request.getParameter("lastName");
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
-
+			System.out.println("Data Get");
+			
+			
 			UserDTO userDTO = new UserDTO();
-
+			
+		
 			userDTO.setFirstName(firstname);
 			userDTO.setLastName(lastname);
 			userDTO.setEmail(email);
 			userDTO.setPassword(password);
-
+			
+			System.out.println("Data set");
+			
 			int save = UserDAO.save(userDTO);
 			System.out.println("count : " + save);
 			String message = "";
